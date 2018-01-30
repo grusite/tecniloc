@@ -4,7 +4,7 @@
       <v-text-field v-model="name" clearable @input="save" label="Nombre" prepend-icon="person"/>
       <v-text-field v-model="phone" clearable @input="save" label="Teléfono" prepend-icon="phone"/>
       <v-text-field v-model="timing" clearable @input="save" label="Tiempo estimado"  prepend-icon="access_time"/>
-      <v-btn :disabled="!valid" color="red" :href="url" target="_blank">Enviar mensaje</v-btn>
+      <v-btn :disabled="!valid" color="red" :href="url" target="_blank">Enviar mensaje a cliente</v-btn>
       <v-text-field v-if="valid" disabled auto-grow :label="`Mensaje para ${phoneGlobal}`" textarea v-model="message"/>
     </v-container>
   </v-card>
