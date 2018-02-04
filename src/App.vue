@@ -12,6 +12,11 @@
         </v-layout>
       </v-container>
     </v-content>
+    <v-footer app>
+      <v-spacer>
+        <div class="text-xs-center">Jorge Martín Oliver (jmolive1) - jorge.martin@vodafone.com © {{ new Date().getFullYear() }}</div>
+      </v-spacer>
+    </v-footer>
   </v-app>
 </template>
 
