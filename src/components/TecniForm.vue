@@ -4,21 +4,14 @@
         <v-text-field v-model="name" clearable @input="save" label="Nombre" prepend-icon="person"/>
         <v-text-field v-model="phone" clearable @input="save" label="Teléfono" prepend-icon="phone"/>
         <v-text-field v-model="timing" clearable @input="save" label="Tiempo estimado"  prepend-icon="access_time"/>
-        <v-layout row wrap>
-          <v-flex xs12 md8 offset-md1>
-            <v-radio-group v-model="choose" row>
-              <v-radio label="Ubicación" box color="blue" value="ubicacion" ></v-radio>
-              <v-radio label="Reprograma" color="green" value="reprograma"></v-radio>
-            </v-radio-group>
-          </v-flex>
-          <v-flex xs12 md8 offset-md1 class="mr-0">
-            <v-radio-group v-model="choose" row>
-              <v-radio label="Retraso" color="orange" value="ausente"></v-radio>
-              <v-radio label="Cliente ausente" color="yellow" value="retraso"></v-radio>
-              <!--<v-radio label="Tecnico cancela" color="red" value="cancela"></v-radio>-->
-            </v-radio-group>
-          </v-flex>
-        </v-layout>
+        <v-select 
+          :items="messageTypes" 
+          v-model="choose"
+          item-text="value"
+          item-value="key"
+          prepend-icon="note"
+          :label="$t('label.messageType')"
+        />
         <v-btn :disabled="!valid" color="red" :href="url" target="_blank">Enviar</v-btn>
         <v-text-field v-if="valid" disabled auto-grow :label="`Mensaje para ${phoneGlobal}`" textarea :value="message"/>
       
@@ -33,7 +26,8 @@ export default {
       name: '',
       phone: '',
       timing: '',
-      choose: 'ubicacion',
+      choose: 'place',
+      messageKeys: ['place', 'delay', 'missing', 'reprogram'],
     }
   },
   created() {
@@ -49,6 +43,12 @@ export default {
     },
   },
   computed: {
+    messageTypes() {
+      return this.messageKeys.map(key => ({
+        key,
+        value: this.$t(`key.${key}`),
+      }))
+    },
     valid() {
       if (this.choose === 'cancela' || this.choose === 'ausente' || this.choose === 'reprograma')
         return this.name && this.phone

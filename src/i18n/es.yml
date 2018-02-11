@@ -3,8 +3,16 @@ telefono: telefono
 tiempo: tiempo estimado
 
 message:
-  ubicacion: "Hola,\nsoy {name} su técnico de la empresa colaboradora de Vodafone, le indico cuál es mi ubicación en tiempo real para que esté informado en todo momento. Mi estimación de llegada a su domicilio es de {timing}.\n\nMuchas gracias"
-  retraso: "Hola,\nsoy {name} su técnico de una empresa colaboradora de Vodafone. Voy a llegar mas tarde de lo previsto. Retrasamos su instalación {timing}.\n\nDisculpe las molestias"
-  ausente: "Hola,\nsoy {name} su técnico de una empresa colaboradora de Vodafone. He intentado contactar con usted pero no le he localizado por lo que no va a ser posible realizar su instalación hoy. En breve nos pondremos en contacto con usted para darle una nueva cita.\n\nDisculpe las molestias"
-  reprograma: "En breve nos pondremos en contacto con usted para acordar la nueva cita"
-  cancela: "Hola,\nsoy {name} su técnico de una empresa colaboradora de Vodafone. No va a ser posible realizar su instalación hoy. En breve nos pondremos en contacto con usted para darle nueva cita.\n\nDisculpe las molestias"
+  place: "Hola,\nsoy {name} su técnico de la empresa colaboradora de Vodafone, le indico cuál es mi ubicación en tiempo real para que esté informado en todo momento. Mi estimación de llegada a su domicilio es de {timing}.\n\nMuchas gracias"
+  delay: "Hola,\nsoy {name} su técnico de una empresa colaboradora de Vodafone. Voy a llegar mas tarde de lo previsto. Retrasamos su instalación {timing}.\n\nDisculpe las molestias"
+  missing: "Hola,\nsoy {name} su técnico de una empresa colaboradora de Vodafone. He intentado contactar con usted pero no le he localizado por lo que no va a ser posible realizar su instalación hoy. En breve nos pondremos en contacto con usted para darle una nueva cita.\n\nDisculpe las molestias"
+  reprogram: "En breve nos pondremos en contacto con usted para acordar la nueva cita"
+
+key:
+  place: Ubicacion  
+  delay: DELAY 
+  missing: MISSING 
+  reprogram: REPROGRAM 
+
+label:
+  messageType: Tipo de mensaje
