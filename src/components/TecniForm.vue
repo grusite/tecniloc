@@ -61,7 +61,7 @@ export default {
       })
     },
     phoneGlobal() {
-      return `34${this.phone.replace(/^\+?34/, '').replace(/\D/g, '')}`
+      return `34${this.phone && this.phone.replace(/^\+?34/, '').replace(/\D/g, '')}`
     },
     url() {
       return `https://api.whatsapp.com/send?phone=${this.phoneGlobal}&text=${encodeURI(
