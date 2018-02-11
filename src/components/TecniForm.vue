@@ -1,19 +1,19 @@
 <template>
   <v-card raised>
     <v-container>
-        <v-text-field v-model="name" clearable @input="save" label="Nombre" prepend-icon="person"/>
-        <v-text-field v-model="phone" clearable @input="save" label="Teléfono" prepend-icon="phone"/>
-        <v-text-field v-model="timing" clearable @input="save" label="Tiempo estimado"  prepend-icon="access_time"/>
+        <v-text-field v-model="name" clearable @input="save" :label="$t('label.name')" prepend-icon="person"/>
+        <v-text-field v-model="phone" clearable @input="save" :label="$t('label.phone')" prepend-icon="phone"/>
+        <v-text-field v-model="timing" clearable @input="save" :label="$t('label.timing')"  prepend-icon="access_time"/>
         <v-select 
           :items="messageTypes" 
           v-model="choose"
           item-text="value"
           item-value="key"
-          prepend-icon="note"
+          prepend-icon="message"
           :label="$t('label.messageType')"
         />
-        <v-btn :disabled="!valid" color="red" :href="url" target="_blank">Enviar</v-btn>
-        <v-text-field v-if="valid" disabled auto-grow :label="`Mensaje para ${phoneGlobal}`" textarea :value="message"/>
+        <v-btn :disabled="!valid" color="red" :href="url" target="_blank">{{$t('button.send')}}</v-btn>
+        <v-text-field v-if="valid" disabled auto-grow :label="$t('label.message',{phoneGlobal})" textarea :value="message"/>
       
     </v-container>
   </v-card>

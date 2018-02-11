@@ -1,27 +1,37 @@
 <template>
-  <div>
-      current: {{ $i18n.locale }}
+    <v-btn-toggle v-model="selected" @change="setLocale">
       <v-btn 
-        v-for="lang in langs"
+        v-for="(lang,index) in langs"
         :key="lang"
-        @click="changeTo(lang)"
-        :primary="$i18n.locale==lang"
-      >
-        {{lang}}
-      </v-btn>
-  </div>
+        :primary="index==selected"
+        color="red"
+      >{{lang}}</v-btn>
+    </v-btn-toggle>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      langs: ['es', 'ca'],
+      selected: -1,
+      langs: [],
     }
   },
+  watch: {
+    '$i18n.locale'(current) {
+      this.sync(current)
+    },
+  },
+  created() {
+    this.langs = Object.keys(this.$i18n.messages)
+    this.sync(this.$i18n.locale)
+  },
   methods: {
-    changeTo(locale) {
-      this.$i18n.locale = locale
+    sync(lang) {
+      this.selected = this.langs.indexOf(lang)
+    },
+    setLocale() {
+      this.$i18n.locale = this.langs[this.selected]
     },
   },
 }

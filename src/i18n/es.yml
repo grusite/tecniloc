@@ -1,7 +1,3 @@
-name: nombre
-telefono: telefono
-tiempo: tiempo estimado
-
 message:
   place: "Hola,\nsoy {name} su técnico de la empresa colaboradora de Vodafone, le indico cuál es mi ubicación en tiempo real para que esté informado en todo momento. Mi estimación de llegada a su domicilio es de {timing}.\n\nMuchas gracias"
   delay: "Hola,\nsoy {name} su técnico de una empresa colaboradora de Vodafone. Voy a llegar mas tarde de lo previsto. Retrasamos su instalación {timing}.\n\nDisculpe las molestias"
@@ -10,9 +6,16 @@ message:
 
 key:
   place: Ubicacion  
-  delay: DELAY 
-  missing: MISSING 
-  reprogram: REPROGRAM 
+  delay: Retraso 
+  missing: Ausente 
+  reprogram: Reprograma 
 
 label:
+  name: Nombre
+  phone: Teléfono
+  timing: Tiempo estimado
   messageType: Tipo de mensaje
+  message: Mensaje para {phoneGlobal}
+
+button:
+  send: Enviar

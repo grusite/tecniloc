@@ -12,3 +12,10 @@ const i18n = new VueI18n({
 })
 
 export default i18n
+
+if (module.hot) {
+  module.hot.accept(['./es.yml', './ca.yml'], function() {
+    i18n.setLocaleMessage('es', require('./es.yml'))
+    i18n.setLocaleMessage('ca', require('./ca.yml'))
+  })
+}
