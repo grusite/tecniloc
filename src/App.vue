@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-toolbar color="red" fixed app>
-      <v-toolbar-title>Vodafone tecnicos</v-toolbar-title>
+      <v-toolbar-title>Vodafone técnicos</v-toolbar-title>
       <v-spacer/>
       <LangSelector/>
       

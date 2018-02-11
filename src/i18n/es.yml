@@ -5,7 +5,7 @@ message:
   reprogram: "En breve nos pondremos en contacto con usted para acordar la nueva cita"
 
 key:
-  place: Ubicacion  
+  place: Ubicación  
   delay: Retraso 
   missing: Ausente 
   reprogram: Reprograma 

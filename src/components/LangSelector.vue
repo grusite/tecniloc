@@ -1,16 +1,6 @@
 <template>
-    <!-- <v-btn-toggle v-model="selected" @change="setLocale">
-      <v-btn 
-        v-for="(lang,index) in langs"
-        :key="lang"
-        depressed
-        flat
-        :color="index!==selected ? 'red' : 'primary'"
-      >{{lang}}</v-btn>
-    </v-btn-toggle> -->
     <v-menu bottom left>
       <v-btn icon slot="activator" color="white">
-        <!-- <v-icon>more_vert</v-icon> -->
         <img :src="icons[$i18n.locale]">
       </v-btn>
       <v-list>
