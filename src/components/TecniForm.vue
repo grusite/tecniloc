@@ -54,39 +54,11 @@ export default {
         return this.name && this.phone
       return this.name && this.phone && this.timing
     },
-    messageUbicacion() {
-      return `Hola,\nsoy ${
-        this.name
-      } su técnico de la empresa colaboradora de Vodafone, le indico cuál es mi ubicación en tiempo real para que esté informado en todo momento. Mi estimación de llegada a su domicilio es de ${
-        this.timing
-      }.\n\nMuchas gracias`
-    },
-    messageRetraso() {
-      return `Hola,\nsoy ${
-        this.name
-      } su técnico de una empresa colaboradora de Vodafone. Voy a llegar mas tarde de lo previsto. Retrasamos su instalación ${
-        this.timing
-      }.\n\nDisculpe las molestias`
-    },
-    messageAusente() {
-      return `Hola,\nsoy ${
-        this.name
-      } su técnico de una empresa colaboradora de Vodafone. He intentado contactar con usted pero no le he localizado por lo que no va a ser posible realizar su instalación hoy. En breve nos pondremos en contacto con usted para darle una nueva cita.\n\nDisculpe las molestias`
-    },
-    messageReprograma() {
-      return `En breve nos pondremos en contacto con usted para acordar la nueva cita`
-    },
-    messageCancela() {
-      return `Hola,\nsoy ${
-        this.name
-      } su técnico de una empresa colaboradora de Vodafone. No va a ser posible realizar su instalación hoy. En breve nos pondremos en contacto con usted para darle nueva cita.\n\nDisculpe las molestias`
-    },
     message() {
-      if (this.choose === 'ubicacion') return this.messageUbicacion
-      else if (this.choose === 'retraso') return this.messageRetraso
-      else if (this.choose === 'ausente') return this.messageAusente
-      else if (this.choose === 'reprograma') return this.messageReprograma
-      else if (this.choose === 'cancela') return this.messageCancela
+      return this.$t(`message.${this.choose}`, {
+        name: this.name,
+        timing: this.timing,
+      })
     },
     phoneGlobal() {
       return `34${this.phone.replace(/^\+?34/, '').replace(/\D/g, '')}`
