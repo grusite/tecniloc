@@ -31,15 +31,15 @@ export default {
     }
   },
   created() {
-    this.name = localStorage.getItem('name') || ''
-    //this.phone = localStorage.getItem('phone') || ''
-    //this.timing = localStorage.getItem('timing') || ''
+    this.name = window.localStorage.getItem('name') || ''
+    //this.phone = window.localStorage.getItem('phone') || ''
+    //this.timing = window.localStorage.getItem('timing') || ''
   },
   methods: {
     save() {
-      localStorage.setItem('name', this.name || '')
-      //localStorage.setItem('phone', this.phone || '')
-      //localStorage.setItem('timing', this.timing || '')
+      window.localStorage.setItem('name', this.name || '')
+      //window.localStorage.setItem('phone', this.phone || '')
+      //window.localStorage.setItem('timing', this.timing || '')
     },
   },
   computed: {

@@ -35,10 +35,13 @@ export default {
   },
   created() {
     this.langs = Object.keys(this.$i18n.messages)
+    let saved = window.localStorage.getItem('locale')
+    if (saved) this.changeTo(saved)
   },
   methods: {
     changeTo(locale) {
       this.$i18n.locale = locale
+      window.localStorage.setItem('locale', locale)
     },
   },
 }
