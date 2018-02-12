@@ -9,6 +9,8 @@
     "start": "npm run dev",
     "build": "node build/build.js",
     "deploy": "surge dist tecniloc.surge.sh",
+    "deploy-dev": "surge dist tecniloc-dev.surge.sh",
+    "build-deploy-dev": "npm run build && npm run deploy-dev",
     "build-deploy": "npm run build && npm run deploy"
   },
   "dependencies": {
@@ -59,9 +61,5 @@
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }
