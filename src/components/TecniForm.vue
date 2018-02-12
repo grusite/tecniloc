@@ -50,8 +50,7 @@ export default {
       }))
     },
     valid() {
-      if (this.choose === 'cancela' || this.choose === 'ausente' || this.choose === 'reprograma')
-        return this.name && this.phone
+      if (this.choose === 'missing' || this.choose === 'reprogram') return this.name && this.phone
       return this.name && this.phone && this.timing
     },
     message() {

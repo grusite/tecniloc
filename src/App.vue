@@ -2,9 +2,8 @@
   <v-app>
     <v-toolbar color="red" fixed app>
       <v-toolbar-title>Vodafone técnicos</v-toolbar-title>
-      <v-spacer/>
-      <LangSelector/>
-      
+      <!-- <v-spacer/>
+      <LangSelector/> -->
     </v-toolbar>
     <v-content>
       <v-container>
