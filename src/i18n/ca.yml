@@ -1,7 +1,7 @@
 message:
   place: "Hola,\nsoc {name} el seu tècnic autoritzat de Vodafone, li dono la meva ubicació en temps real per a que estigui informat en tot moment. La meva estimació d’arribada al seu domicili és de {timing}.\n\nMoltes gràcies"
   delay: "Hola,\nsoc {name} el seu tècnic autoritzat de Vodafone. Arribaré més tard del que estava previst. Retrassem la seva instal.lació {timing}.\n\nDisculpeu les molèsties "
-  missing: "Hola,\nsoc {name} el seu tècnic autoritzat de Vodafone. He provat de contactar amb vosté però no l’he localitzat i per tant no serà possible realitzar la seva instal.lació avui. En breu ens posarem en contacte amb vostè per a donar-li una nova cita..\n\nDisculpeu les molèsties"
+  missing: "Hola,\nsoc {name} el seu tècnic autoritzat de Vodafone. He anat a la cita d'instal.lació que teniem programada per avui i no l'he trobat al seu domicili. En breu ens posarem en contacte amb vostè per a donar-li una nova cita.\n\nDisculpeu les molèsties"
   reprogram: "En breu ens posarem en contacte amb vostè per acordar la nova cita"
 
 key:
