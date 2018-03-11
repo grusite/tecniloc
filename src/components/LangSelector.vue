@@ -16,10 +16,11 @@
 <script>
 import es from '@/assets/es.png'
 import ca from '@/assets/ca.png'
+import lowi from '@/assets/lowi.png'
 export default {
   data() {
     return {
-      icons: { es, ca },
+      icons: { es, ca, lowi },
       langs: [],
     }
   },
